@@ -40,7 +40,9 @@ function App() {
     const pacientesActualizado = pacientes.filter(
       (elemento) => elemento.id !== id
     );
-    setPacientes(pacientesActualizado);
+    if (confirm("Seguro desea eliminar la cita?")) {
+      setPacientes(pacientesActualizado);
+    }
   };
 
   return (
